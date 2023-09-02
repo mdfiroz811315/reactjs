@@ -72,5 +72,10 @@ Node js version 14+ should be installed in our machine
 
 npx create-react-app <App Name>  // <App Name> us the Name of your Application
 
+# What Knowledge we need to Learn React
+
+1. HTML and CSS
+2. Javascript
+3. Ecma 6
 
 
