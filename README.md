@@ -81,16 +81,18 @@ npx create-react-app <App Name>  // <App Name> us the Name of your Application
 
  # Basic Concerpt of ECMA6 (ES6)
 
+ added feature like let and Const for variable declaration
+
 ## Arrow Functions
 
 Arrow functions allow us to write shorter function syntax:
 Example
 ### Before:
-hello = function() {
+const hello = function() {
   return "Hello World!";
 }
 ### With Arrow Function:
-hello = () => {
+const hello = () => {
   return "Hello World!";
 }
 ### Arrow Functions Return Value by Default:
@@ -98,6 +100,10 @@ hello = () => {
 hello = () => "Hello World!";
 
 ### Arrow Function With Parameters:
+
+const hello = function(val) {
+  return "Hello " + val;
+}
 
 hello = (val) => "Hello " + val;
 Example
@@ -107,13 +113,13 @@ Example
 hello = val => "Hello " + val;
 
 
+## Array Methods
 
-
-Array Methods
 There are many JavaScript array methods.
 One of the most useful in React is the .map() array method.
 The .map() method allows you to run a function on each item in the array, returning a new array as the result.
-In React, map() can be used to generate lists.
+ 
+### In React, map() can be used to generate lists.
 Example
 Generate a list of items from an array:
 const myArray = ['apple', 'banana', 'orange'];
@@ -125,6 +131,7 @@ import ReactDOM from 'react-dom/client';
 const myArray = ['apple', 'banana', 'orange'];
 
 const myList = myArray.map((item) => <p>{item}</p>)
+
 <p>apple</p>
 <p>banana</p>
 <p>orange</p>
@@ -132,7 +139,10 @@ const myList = myArray.map((item) => <p>{item}</p>)
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 root.render(myList);
-Destructuring
+
+
+## Destructuring
+
 To illustrate destructuring, we'll make a sandwich. Do you take everything out of the refrigerator to make your sandwich? No, you only take out the items you would like to use on your sandwich.
 
 Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these.
@@ -201,11 +211,17 @@ function myVehicle({ model, registration: { state } }) {
   const message = 'My ' + model + ' is registered in ' + state + '.';
 }
 
-Spread Operator
+## Spread Operator
+
 The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+
 const numbersOne = [1, 2, 3];
 const numbersTwo = [4, 5, 6];
+
 const numbersCombined = [...numbersOne, ...numbersTwo];
+
+#### numbersCombined = [1,2,3,4,5,6];
+
 Combine these two objects:
 
 const myVehicle = {
@@ -221,12 +237,24 @@ const updateMyVehicle = {
 }
 
 const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
-Modules
+
+#### myUpdatedVehicle = {
+     brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021, 
+  color: 'yellow'
+}
+
+
+
+## Modules
+
 JavaScript modules allow you to break up your code into separate files.
 This makes it easier to maintain the code-base.
 ES Modules rely on the import and export statements.
 
-Export
+### Export
 You can export a function or variable from any file.
 Let us create a file named person.js, and fill it with the things we want to export.
 There are two types of exports: Named and Default.
@@ -242,7 +270,9 @@ person.js
 const name = "Jesse"
 const age = 40
 export { name, age }
-Import
+
+### Import
+
 You can import modules into a file in two ways, based on if they are named exports or default exports.
 Named exports must be destructured using curly braces. Default exports do not.
 Example
@@ -252,7 +282,8 @@ Example
 Import a default export from the file message.js:
 import message from "./message.js";
 
-Ternary Operator
+## Ternary Operator
+
 The ternary operator is a simplified conditional operator like if / else.
 Syntax: condition ? <expression if true> : <expression if false>
 Here is an example using if / else:
@@ -264,3 +295,17 @@ if (authenticated) {
 }
 With Ternary 
 authenticated ? renderApp() : renderLogin();
+
+# JSX
+
+let x = "hello"
+<>
+        <html>
+        <body>{x} </body>
+        </html>
+</>
+this will compile to
+
+    <html>
+        <body> hello</body>
+    </html>
