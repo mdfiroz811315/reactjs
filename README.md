@@ -79,26 +79,31 @@ npx create-react-app <App Name>  // <App Name> us the Name of your Application
 3. Ecma 6
 
 
- ## Basic Concerpt of ECMA6 (ES6)
+ # Basic Concerpt of ECMA6 (ES6)
 
-# Arrow Functions
+## Arrow Functions
 
 Arrow functions allow us to write shorter function syntax:
 Example
-## Before:
+### Before:
 hello = function() {
   return "Hello World!";
 }
-With Arrow Function:
+### With Arrow Function:
 hello = () => {
   return "Hello World!";
 }
-Arrow Functions Return Value by Default:
+### Arrow Functions Return Value by Default:
+
 hello = () => "Hello World!";
-Arrow Function With Parameters:
+
+### Arrow Function With Parameters:
+
 hello = (val) => "Hello " + val;
 Example
-Arrow Function Without Parentheses:
+
+### Arrow Function Without Parentheses:
+
 hello = val => "Hello " + val;
 
 
