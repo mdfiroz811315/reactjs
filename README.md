@@ -300,9 +300,10 @@ authenticated ? renderApp() : renderLogin();
 
 let x = "hello"
 <>
-       <!-- <html>
-        <body>{x} </body>
-        </html> -->
+       
+       <HTML>
+        <Body>{x} </Body>
+        </HTML> 
 </>
 this will compile to
 
